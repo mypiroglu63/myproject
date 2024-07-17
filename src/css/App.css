@@ -1,0 +1,265 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Genel Ayarlar */
+:root {
+  --header-bg-color: #252129;
+  --header-text-color: #ffffff;
+  --button-bg-color: #9a86fd;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #9a86fd;
+  --skills-bg-color: #252129;
+  --skills-text-color: #ffffff;
+  --skill-item-bg-color: #252129;
+  --skill-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --skill-item-title-color: #9a86fd;
+  --skill-item-text-color: #dcdcdc;
+  --profile-bg-color: #252129;
+  --profile-text-color: #ffffff;
+  --projects-bg-color: #ffffff; /* Light modda beyaz arka plan */
+  --projects-text-color: #000000; /* Light modda siyah yazı rengi */
+  --project-item-bg-color: #252129;
+  --project-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --project-item-title-color: #9a86fd;
+  --project-item-text-color: #dcdcdc;
+  --footer-bg-color: #000000;
+  --footer-text-color: #ffffff;
+  --link-color: #9a86fd;
+  --footer-personel-text-color: black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.light {
+  background-color: #ffffff;
+  color: #000000;
+  --header-bg-color: #ffffff;
+  --header-text-color: #000000;
+  --button-bg-color: #3626a7;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #3626a7;
+  --skills-bg-color: #ffffff;
+  --skills-text-color: #000000;
+  --skill-item-bg-color: #ffffff;
+  --skill-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --skill-item-title-color: #3626a7;
+  --skill-item-text-color: #333333;
+  --profile-bg-color: #ffffff;
+  --profile-text-color: #000000;
+  --profile-item-title-color: #3626a7;
+  --projects-bg-color: #ffffff;
+  --projects-text-color: #000000;
+  --project-item-bg-color: #ffffff;
+  --project-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --project-item-title-color: #3626a7;
+  --project-item-text-color: #333333;
+  --footer-bg-color: #eaeaea;
+  --footer-text-color: #000000;
+  --footer-personel-text-color: black;
+}
+
+.dark {
+  background-color: #252129;
+  color: #ffffff;
+  --header-bg-color: #252129;
+  --header-text-color: #ffffff;
+  --button-bg-color: #9a86fd;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #9a86fd;
+  --skills-bg-color: #252129;
+  --skills-text-color: #ffffff;
+  --skill-item-bg-color: #252129;
+  --skill-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --skill-item-title-color: #9a86fd;
+  --skill-item-text-color: #dcdcdc;
+  --profile-bg-color: #252129;
+  --profile-text-color: #ffffff;
+  --projects-bg-color: #252129;
+  --projects-text-color: #ffffff;
+  --project-item-bg-color: #252129;
+  --project-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --project-item-title-color: #9a86fd;
+  --project-item-text-color: #dcdcdc;
+  --footer-bg-color: #000000;
+  --footer-text-color: #ffffff;
+  --footer-personel-text-color: white;
+  --link-color: #9a86fd;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    margin: 0 20px;
+    padding: 20px;
+  }
+
+  .projects h2 {
+    font-size: 30px;
+    text-align: center; /* Başlığı ortala */
+    margin-left: 0;
+  }
+
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+  }
+
+  .project-media {
+    height: auto;
+  }
+
+  .header {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .navi a {
+    margin-left: 20px;
+  }
+
+  .hire-me-section {
+    margin: 0 20px;
+    padding: 20px;
+  }
+
+  .hire-me-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hire-me-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hire-me-image img {
+    max-width: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-left {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-right {
+    margin-right: 20px;
+  }
+
+  .footer-linkss {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .footer-linkss a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects h2 {
+    font-size: 25px;
+  }
+
+  .project-item {
+    padding: 10px;
+  }
+
+  .project-item h3 {
+    font-size: 20px;
+  }
+
+  .project-item p {
+    font-size: 14px;
+  }
+
+  .project-links a {
+    font-size: 14px;
+  }
+
+  .project-media {
+    height: auto;
+  }
+
+  .navi a {
+    padding: 5px 10px;
+    margin-left: 10px;
+  }
+
+  .hire-me-text h1 {
+    font-size: 2rem;
+  }
+
+  .hire-me-text p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+
+  .footer-left .p {
+    font-size: 1.5rem;
+  }
+
+  .footer-left .email {
+    font-size: 14px;
+  }
+
+  .footer-left .icon {
+    font-size: 16px;
+  }
+
+  .footer-linkss a {
+    font-size: 14px;
+  }
+}

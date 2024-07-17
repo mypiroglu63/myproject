@@ -1,0 +1,48 @@
+.skills {
+  margin: 0 150px;
+  padding: 40px 20px;
+  background-color: var(--skills-bg-color);
+  color: var(--skills-text-color);
+}
+
+.skills h2 {
+  font-size: 40px;
+  text-align: left; /* Başlığı sola hizala */
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  flex: 1 1 30%;
+  max-width: 30%;
+  margin: 10px;
+  padding: 20px;
+  background-color: var(--skill-item-bg-color);
+  border-radius: 8px;
+}
+
+.skill-item h3 {
+  color: var(--skill-item-title-color);
+  margin-bottom: 10px;
+  margin-left: -20px;
+}
+
+.skill-item p {
+  margin-left: -20px;
+  color: var(--skill-item-text-color);
+}
+
+.skills::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px); /* Sağdan ve soldan boşluk bırak */
+  height: 2px;
+  background-color: var(--link-color);
+  margin: 20px auto 0 auto;
+}

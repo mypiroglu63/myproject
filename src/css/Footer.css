@@ -1,0 +1,77 @@
+.footer {
+  width: 100%;
+  height: 300px;
+  padding: 20px;
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+  text-align: left; /* Metin solda hizalanacak */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Tüm içerik üstte hizalanacak */
+}
+
+.footer-left {
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer-left .p {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Metin boyutunu artırdık */
+}
+
+.footer-left .email {
+  color: red; /* Email kırmızı renkte */
+  font-size: 16px;
+}
+
+.footer-left .icon {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end; /* Linkler sağda hizalanacak */
+  align-items: flex-end; /* Linkler en altta hizalanacak */
+  width: 100%;
+  margin-right: 150px;
+}
+
+.footer-linkss {
+  display: flex;
+  justify-content: flex-end; /* Linkler sağda hizalanacak */
+  margin-top: 200px;
+  margin-left: -150px;
+}
+
+.footer-linkss a {
+  text-decoration: none;
+  margin-left: 20px; /* Linkler arasında boşluk */
+  font-size: 16px; /* Linklerin boyutunu artırdık */
+}
+
+.footer-linkss .footer-personal {
+  color: var(--footer-personal-text-color); /* Personel Blog Beyaz */
+}
+
+.footer-linkss .footer-github {
+  color: lightgreen; /* Github Açık Yeşil */
+}
+
+.footer-linkss .footer-linkedin {
+  color: #0e76a8; /* Linkedin Mavisi */
+  /* Metin boyutu */
+}
+
+.footer-linkss a:hover {
+  text-decoration: underline; /* Üzerine gelince alt çizgi */
+}

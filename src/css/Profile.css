@@ -1,0 +1,51 @@
+.profile {
+  margin: 0 150px;
+  padding: 40px 20px;
+  background-color: var(--profile-bg-color);
+  color: var(--profile-text-color);
+}
+
+.profile h2 {
+  font-size: 40px;
+  text-align: left; /* Başlığı sola hizala */
+  margin-bottom: 20px;
+}
+
+.profile-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.profile-left,
+.profile-right {
+  flex: 1 1 45%;
+  max-width: 45%;
+  margin-left: 20px;
+}
+
+.profile-left h3,
+.profile-right h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.profile-left p,
+.profile-right p {
+  font-weight: bold;
+  color: var(--profile-text-color);
+  margin-bottom: 10px;
+}
+
+.profile-item {
+  color: var(--link-color);
+}
+
+.profile::after {
+  content: "";
+  display: block;
+  width: calc(100% - 40px); /* Sağdan ve soldan boşluk bırak */
+  height: 2px;
+  background-color: var(--link-color);
+  margin: 20px auto 0 auto;
+}

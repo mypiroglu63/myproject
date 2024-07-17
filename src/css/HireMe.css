@@ -1,0 +1,136 @@
+.hire-me-section {
+  margin: 0 150px -120px 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 40px;
+  flex-direction: column;
+}
+
+.hire-me-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.hire-me-section.light {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.hire-me-section.dark {
+  background-color: #252129;
+  color: #fff;
+}
+
+.hire-me-text {
+  max-width: 50%;
+  text-align: left;
+}
+
+.hire-me-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hire-me-text p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hire-me-section.light .hire-me-text p {
+  color: #666;
+}
+
+.hire-me-section.dark .hire-me-text p {
+  color: #dcdcdc;
+}
+
+.hire-me-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hire-me {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+}
+
+.github {
+  background-color: #333;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.linkedin {
+  background-color: #0e76a8;
+  color: #fff;
+}
+
+.hire-me-image img {
+  border-radius: 10px;
+  max-width: 400px;
+}
+
+.name {
+  text-decoration: none;
+  color: #5c48cc;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 85px; /* Çizginin başlangıç noktasını hizalamak için */
+}
+
+.name::before {
+  content: "";
+  height: 2px;
+  width: 75px;
+  background-color: #5c48cc;
+  position: absolute;
+  left: 0; /* Çizginin 'Mehmet Yasin Piroğlu' yazısına uzaklığını ayarlayın */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Light mode button styles */
+.hire-me-section.light .btn {
+  background-color: #ffffff;
+  color: var(--button-bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hire-me-section.light .btn:hover {
+  background-color: var(--button-bg-color);
+  color: #ffffff;
+}
+
+/* Dark mode button styles */
+.hire-me-section.dark .btn {
+  background-color: gray;
+  color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hire-me-section.dark .btn:hover {
+  background-color: #ffffff;
+  color: gray;
+}
