@@ -1,21 +1,9 @@
-export const SET_THEME = "SET_THEME";
-export const SET_LANGUAGE = "SET_LANGUAGE";
-export const SET_PROFILE_DATA = "SET_PROFILE_DATA";
-
-export const setTheme = (theme) => ({
-  type: SET_THEME,
-  payload: theme,
-});
-
-export const setLanguage = (language) => ({
-  type: SET_LANGUAGE,
-  payload: language,
-});
-
-export const setProfileData = (data) => ({
-  type: SET_PROFILE_DATA,
-  payload: data,
-});
+import {
+  SET_THEME,
+  SET_LANGUAGE,
+  SET_PROFILE_DATA,
+  SET_HIREME_DATA,
+} from "./actions";
 
 const initialState = {
   profile: {
@@ -143,6 +131,26 @@ const initialState = {
     tr: "Bir sonraki ürününüzde birlikte çalışalım.",
     email: "mypiroglu63@gmail.com",
   },
+  hireMe: {
+    en: {
+      heading: "Architect of Digital Transformation",
+      paragraph:
+        "Hello, I'm Mehmet Yasin Piroğlu. I am a full-stack developer. If you are looking for a developer to create robust and scalable web applications, meet me, who offers user-focused and impactful solutions. I am here to take your projects to the next level with an innovative and minimalist approach.",
+      hireMe: "Hire me",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+    tr: {
+      heading: "Dijital Dönüşümün Mimarı",
+      paragraph:
+        "Merhaba, ben Mehmet Yasin Piroğlu. Tam yığın bir geliştiriciyim. Sağlam ve ölçeklenebilir web uygulamaları oluşturacak bir geliştirici arıyorsanız, kullanıcı odaklı ve etkileyici çözümler sunan benimle tanışın. Yenilikçi ve minimalist yaklaşımla projelerinizi bir üst seviyeye taşımak için buradayım",
+      hireMe: "Beni işe al",
+      github: "GitHub",
+      linkedin: "LinkedIn",
+    },
+    name: "Mehmet Yasin Piroğlu",
+    image: "src/assets/56cbf71b-ddb6-40d4-9be7-897a68611739.jpg",
+  },
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -161,6 +169,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         language: action.payload,
+      };
+    case SET_HIREME_DATA:
+      return {
+        ...state,
+        hireMe: action.payload,
       };
     default:
       return state;
