@@ -1,6 +1,9 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "../css/HireMe.css";
+import HireMeButton from "./Button Componentleri/HireMeButton";
+import GitHubButton from "./Button Componentleri/GitHubButton";
+import LinkedInButton from "./Button Componentleri/LinkedInButton";
 
 const HireMe = () => {
   const theme = useSelector((state) => state.theme);
@@ -35,30 +38,14 @@ const HireMe = () => {
           <h1>{currentText.heading}</h1>
           <p>{currentText.paragraph}</p>
           <div className="hire-me-buttons">
-            <button className="btn hire-me">{currentText.hireMe}</button>
-            <a
-              href="https://github.com/mypiroglu63"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn github">
-                <i className="fab fa-github"></i> {currentText.github}
-              </button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mehmet-yasin-piro%C4%9Flu-079223224/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="btn linkedin">
-                <i className="fab fa-linkedin"></i> {currentText.linkedin}
-              </button>
-            </a>
+            <HireMeButton text={currentText.hireMe} />
+            <GitHubButton text={currentText.github} />
+            <LinkedInButton text={currentText.linkedin} />
           </div>
         </div>
         <div className="hire-me-image">
           <img
-            src="src\assets\56cbf71b-ddb6-40d4-9be7-897a68611739.jpg"
+            src="src/assets/56cbf71b-ddb6-40d4-9be7-897a68611739.jpg"
             alt="Hire me"
           />
         </div>

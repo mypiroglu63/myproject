@@ -1,12 +1,16 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme, setLanguage } from "../redux/actions";
+import NavigationLink from "./NavigationLink";
 import "../css/Header.css";
 
 const Header = () => {
   const dispatch = useDispatch();
   const theme = useSelector((state) => state.theme);
   const language = useSelector((state) => state.language);
+  const navigationLinkIds = useSelector((state) =>
+    state.navigationLinks.map((link) => link.id)
+  );
 
   const toggleTheme = () => {
     dispatch(setTheme(theme === "light" ? "dark" : "light"));
@@ -50,9 +54,9 @@ const Header = () => {
         <div className="header-left"></div>
         <div className="logo">M</div>
         <nav className="navi">
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#hire-me">Hire me</a>
+          {navigationLinkIds.map((id) => (
+            <NavigationLink key={id} linkId={id} />
+          ))}
         </nav>
       </div>
     </header>

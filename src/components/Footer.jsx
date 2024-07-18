@@ -1,38 +1,30 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import FooterLink from "./FooterLink";
 import "../css/Footer.css";
 
 const Footer = () => {
   const language = useSelector((state) => state.language);
+  const footerText = useSelector((state) => state.footerText);
+  const footerLinkIds = useSelector((state) =>
+    state.footerLinks.map((link) => link.id)
+  );
 
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-left">
-          <p className="p">
-            {language === "en"
-              ? "Let's work together on your next product."
-              : "Bir sonraki ürününüzde birlikte çalışalım."}
-          </p>
+          <p className="p">{footerText[language]}</p>
           <p>
             <span className="icon">👉</span>
-            <span className="email">mypiroglu63@gmail.com</span>
+            <span className="email">{footerText.email}</span>
           </p>
         </div>
         <div className="footer-right">
           <div className="footer-linkss">
-            <a href="#hireme" className="footer-personal">
-              Personal Blog
-            </a>
-            <a href="https://github.com/mypiroglu63" className="footer-github">
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/mehmet-yasin-piro%C4%9Flu-079223224/"
-              className="footer-linkedin"
-            >
-              LinkedIn
-            </a>
+            {footerLinkIds.map((id) => (
+              <FooterLink key={id} linkId={id} />
+            ))}
           </div>
         </div>
       </div>

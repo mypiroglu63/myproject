@@ -1,0 +1,44 @@
+.project-item {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.project-media {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-tags {
+  margin: 8px 0;
+}
+
+.project-tag {
+  display: inline-block;
+
+  background-color: white;
+  border: 1px solid #3626a7;
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  color: #3626a7;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.project-links a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
