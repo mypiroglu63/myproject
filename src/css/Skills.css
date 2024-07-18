@@ -7,7 +7,7 @@
 
 .skills h2 {
   font-size: 40px;
-  text-align: left; /* Başlığı sola hizala */
+  text-align: left;
   margin-bottom: 20px;
 }
 
@@ -41,7 +41,7 @@
 .skills::after {
   content: "";
   display: block;
-  width: calc(100% - 40px); /* Sağdan ve soldan boşluk bırak */
+  width: calc(100% - 40px);
   height: 2px;
   background-color: var(--link-color);
   margin: 20px auto 0 auto;

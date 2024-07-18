@@ -97,7 +97,7 @@ a {
   font-family: "Roboto", sans-serif;
   position: relative;
   margin-bottom: 20px;
-  padding-left: 85px; /* Çizginin başlangıç noktasını hizalamak için */
+  padding-left: 85px;
 }
 
 .name::before {
@@ -106,12 +106,11 @@ a {
   width: 75px;
   background-color: #5c48cc;
   position: absolute;
-  left: 0; /* Çizginin 'Mehmet Yasin Piroğlu' yazısına uzaklığını ayarlayın */
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* Light mode button styles */
 .hire-me-section.light .btn {
   background-color: #ffffff;
   color: var(--button-bg-color);
@@ -123,7 +122,6 @@ a {
   color: #ffffff;
 }
 
-/* Dark mode button styles */
 .hire-me-section.dark .btn {
   background-color: gray;
   color: #ffffff;

@@ -20,8 +20,8 @@
   --skill-item-text-color: #dcdcdc;
   --profile-bg-color: #252129;
   --profile-text-color: #ffffff;
-  --projects-bg-color: #ffffff; /* Light modda beyaz arka plan */
-  --projects-text-color: #000000; /* Light modda siyah yazı rengi */
+  --projects-bg-color: #ffffff;
+  --projects-text-color: #000000;
   --project-item-bg-color: #252129;
   --project-item-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   --project-item-title-color: #9a86fd;
@@ -125,7 +125,7 @@ main {
 
   .projects h2 {
     font-size: 30px;
-    text-align: center; /* Başlığı ortala */
+    text-align: center;
     margin-left: 0;
   }
 
