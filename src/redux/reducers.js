@@ -82,7 +82,7 @@ const initialState = {
       mediaSrc: "src/assets/Pizza 2.png",
       github: "https://github.com/mypiroglu63/fsweb-s7-challenge-pizza",
       site: "https://pizzaa-projem-1rb66bmmt-yasin-piroglus-projects.vercel.app/",
-      tags: ["react", "redux", "scss"],
+      tags: ["react", "redux", "axios"],
     },
     {
       id: 3,
@@ -98,7 +98,7 @@ const initialState = {
       mediaSrc: "src/assets/Tesbih2.png",
       github: "https://github.com/mypiroglu63/my-tesbih-app",
       site: "https://my-tesbih-app-yasin-piroglus-projects.vercel.app/",
-      tags: ["react", "redux", "material-ui"],
+      tags: ["react", "redux", "axios"],
     },
   ],
   navigationLinks: [

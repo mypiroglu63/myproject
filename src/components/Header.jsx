@@ -2,6 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setTheme, setLanguage } from "../redux/actions";
 import NavigationLink from "./NavigationLink";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../css/Header.css";
 
 const Header = () => {
@@ -13,15 +15,45 @@ const Header = () => {
   );
 
   const toggleTheme = () => {
-    dispatch(setTheme(theme === "light" ? "dark" : "light"));
+    const newTheme = theme === "light" ? "dark" : "light";
+    dispatch(setTheme(newTheme));
+    if (theme === "light" && language === "en") {
+      toast(`Dark mode is now active`);
+    } else if (theme === "light" && language === "tr") {
+      toast(`Karanlık mod aktif`);
+    } else if (theme === "dark" && language === "tr") {
+      toast(`Aydınlık mod aktif`);
+    } else {
+      toast(`Light mode is now active`);
+    }
   };
 
   const toggleLanguage = () => {
-    dispatch(setLanguage(language === "en" ? "tr" : "en"));
+    const newLanguage = language === "en" ? "tr" : "en";
+    dispatch(setLanguage(newLanguage));
+    if (newLanguage === "en") {
+      toast(`Language changed to English`);
+    } else {
+      toast(`Dil Türkçe olarak değiştirildi`);
+    }
   };
 
   return (
     <header className="header">
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{
+          color: theme === "dark" ? "white" : "black",
+        }}
+      />
       <div className="header-top">
         <div className="header-right">
           <div className={`theme-toggle ${theme}`} onClick={toggleTheme}>
@@ -41,7 +73,7 @@ const Header = () => {
           <div className="language-toggle" onClick={toggleLanguage}>
             {language === "en" ? (
               <>
-                <span className="highlight">TÜRKÇE</span>'
+                <span className="highlight">TÜRKÇE</span>
                 <span className="normal">YE GEÇ</span>
               </>
             ) : (
